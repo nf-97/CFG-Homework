@@ -5,7 +5,7 @@ USE practice;
 DELIMITER //
 CREATE PROCEDURE retrieveDBA()
 BEGIN
-	SELECT *
+ 	SELECT *
     FROM practice.staff
     WHERE jobtitle = 'DBA';
 END //
