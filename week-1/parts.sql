@@ -1,6 +1,6 @@
+-- Homework
+-- Create a database called PARTS and create 4 tables: Part, Project, Supplier, Supply
 CREATE DATABASE PARTS ;
-
--- Create 4 tables within Parts: Part, Project, Supplier, Supply
 
 USE PARTS;
 
@@ -28,8 +28,6 @@ SNAME VARCHAR(50),
 STATUS INTEGER, 
 CITY VARCHAR(50)) ;
 
-SELECT * FROM SUPPLY ;
-
 -- Populate Tables
 
 INSERT INTO PART
@@ -41,8 +39,6 @@ VALUES
 ('P4', 'SCREW', 'RED', 14, 'LONDON'),
 ('P5', 'CAM', 'BLUE', 12, 'PARIS'),
 ('P6', 'COG', 'RED', 19, 'LONDON') ;
-
-SELECT * FROM PART ;
 
 SELECT P.P_ID
 FROM PART AS P;
@@ -75,8 +71,6 @@ VALUES
 
 SELECT S.S_ID
 FROM SUPPLIER AS S ;
-
-SELECT * FROM SUPPLY ;
 
 -- SUPPLY
 INSERT INTO SUPPLY
