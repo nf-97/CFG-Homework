@@ -1,6 +1,12 @@
 # Week 2
 
 Learned how to:
-- Select data from tables
-- Update data in tables
-- Alter tables
+- use the where clause
+- set primary and foreign keys
+- update data in tables
+- alter tables
+- update/delete one or more rows in a table
+- drop tables
+
+Learned about:
+- database normalisation

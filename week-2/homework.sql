@@ -1,10 +1,11 @@
--- Using PARTS database, find the name and weight of each red part
+-- Homework
+-- Using the PARTS database, find the name and weight of each red part
 
 SELECT PNAME, WEIGHT, COLOUR 
 FROM PART 
 WHERE COLOUR = 'RED';
 
--- Using PARTS database, find all unique supplier(s) name from London
+-- Using the PARTS database, find all unique supplier(s) name from London
 
 SELECT DISTINCT SNAME
 FROM SUPPLIER
