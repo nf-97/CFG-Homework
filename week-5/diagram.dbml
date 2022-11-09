@@ -1,0 +1,49 @@
+Table sections {
+  id int [primary key]
+  grid_ref varchar
+}
+
+Table surveys {
+  id int [primary key]
+  surveyor_id int
+  avg_temperature float
+  avg_cloud_cover decimal
+  avg_rainfall enum
+  date_time datetime
+}
+
+Table section_data {
+  section_id int 
+  survey_id int
+  shading decimal
+  depth float
+  bank_type enum
+}
+
+Table surveyors {
+  id int [primary key]
+  first_name varchar
+  last_name varchar
+  contact_number varchar
+  email varchar
+  company varchar
+}
+
+Table plant_data {
+  section_id int
+  survey_id int
+  species varchar
+  invasive bool
+  abundance enum
+  plant_type enum
+}
+
+Ref: "sections"."id" < "section_data"."section_id"
+
+Ref: "sections"."id" < "plant_data"."section_id"
+
+Ref: "surveys"."id" < "plant_data"."survey_id"
+
+Ref: "surveyors"."id" < "surveys"."surveyor_id"
+
+Ref: "surveys"."id" < "section_data"."survey_id"
