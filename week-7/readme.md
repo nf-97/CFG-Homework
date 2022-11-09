@@ -7,4 +7,5 @@ Learned about:
 - tableau 
 - power bi
 
+---
 Homework for this week was to work on the final project.

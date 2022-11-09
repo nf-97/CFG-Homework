@@ -2,7 +2,7 @@
 
 Learned how to:
 - use comparison operators 
-- use condition key words 
+- use condition keywords 
 - use logical operators
 - use the like operator 
 - order by 

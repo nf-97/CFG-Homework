@@ -6,6 +6,7 @@ Learned how to:
 Learned about:
 - table locking
 
+---
 This week's homework was to come up with an idea for the final project.
 
 I am creating a database based on my current job (graduate ecologist).
