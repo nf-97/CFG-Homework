@@ -5,9 +5,9 @@ USE practice;
 DELIMITER //
 CREATE PROCEDURE retrieveDBA()
 BEGIN
- 	SELECT *
-    FROM practice.staff
-    WHERE jobtitle = 'DBA';
+  SELECT *
+  FROM practice.staff
+  WHERE jobtitle = 'DBA';
 END //
 DELIMITER ;
 
@@ -17,14 +17,14 @@ USE PARTS;
 DELIMITER // 
 CREATE PROCEDURE LondonBased()
 BEGIN
-	SET @CityLondon = "London";
-	SELECT J_ID AS "Project Name" FROM PROJECT AS PR
-	WHERE CITY = @CityLondon AND
-	J_ID IN
-	(SELECT J_ID FROM SUPPLY AS SLY
-	WHERE S_ID IN
-	(SELECT S_ID FROM SUPPLIER AS SER
-	WHERE CITY = @CityLondon));
+  SET @CityLondon = "London";
+  SELECT J_ID AS "Project Name" FROM PROJECT AS PR
+  WHERE CITY = @CityLondon AND
+  J_ID IN
+  (SELECT J_ID FROM SUPPLY AS SLY
+  WHERE S_ID IN
+  (SELECT S_ID FROM SUPPLIER AS SER
+  WHERE CITY = @CityLondon));
 END //
 DELIMITER ;
 
@@ -37,9 +37,9 @@ DELIMITER //
 CREATE FUNCTION balanceCalc(currentBalance INT, tax INT) RETURNS INT
 DETERMINISTIC
 BEGIN
-	DECLARE taxedBalance INT;
-    SET taxedBalance = currentBalance - tax;
-    RETURN taxedBalance;
+  DECLARE taxedBalance INT;
+  SET taxedBalance = currentBalance - tax;
+  RETURN taxedBalance;
 END //
 DELIMITER ;
 
@@ -52,13 +52,13 @@ CREATE FUNCTION maxBalance(overdraftAllowed INT, balance INT)
 RETURNS INT
 DETERMINISTIC
 BEGIN 
-	DECLARE withOverdraft INT;
-    IF overdraftAllowed = 1 
-    THEN SET withOverdraft = balance + 500;
-    ELSE 
-    SET withOverdraft = balance;
-    END IF;
-    RETURN withOverdraft;
+  DECLARE withOverdraft INT;
+  IF overdraftAllowed = 1 
+  THEN SET withOverdraft = balance + 500;
+  ELSE 
+  SET withOverdraft = balance;
+  END IF;
+  RETURN withOverdraft;
 END //
 DELIMITER ;
 
